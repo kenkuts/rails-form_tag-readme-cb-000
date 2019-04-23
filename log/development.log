@@ -112,3 +112,199 @@ Processing by PostsController#new as HTML
   Parameters: {"post"=>{"action"=>"create", "authenticity_token"=>"wM0kUAuTuVVs64yO9C+2FgVExLWEkXYBL4fHjMvdHb/wXQBnEIZ1bXK7fKn5neP40gN03qULwt9kcGv5dkFKWg==", "commit"=>"Submit Post", "controller"=>"posts", "description"=>"asdf", "title"=>"Rails Introduction Quiz", "utf8"=>"✓"}}
   Rendered posts/new.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-04-22 23:00:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 314ms (Views: 306.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2019-04-22 23:00:14 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-04-22 23:00:17 -0400
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Kenneth R. Kutschera"], ["description", "Hello World!"], ["created_at", "2019-04-23 03:00:58.824612"], ["updated_at", "2019-04-23 03:00:58.824612"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-04-22 23:01:08 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-22 23:01:39 -0400
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/posts_controller.rb:12:in `new'
+
+
+  Rendered /Users/kenkuts/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /Users/kenkuts/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/kenkuts/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/kenkuts/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-22 23:02:02 -0400
+Processing by PostsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/posts_controller.rb:12:in `new'
+
+
+  Rendered /Users/kenkuts/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /Users/kenkuts/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/kenkuts/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/kenkuts/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-22 23:02:11 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=&post%5Bdescription%5D=++++" for 127.0.0.1 at 2019-04-22 23:02:19 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"", "description"=>"    "}}
+  Rendered posts/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=&post%5Bdescription%5D=++++" for 127.0.0.1 at 2019-04-22 23:03:19 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"", "description"=>"    "}}
+  Rendered posts/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=&post%5Bdescription%5D=++++" for 127.0.0.1 at 2019-04-22 23:03:21 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"", "description"=>"    "}}
+  Rendered posts/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=&post%5Bdescription%5D=++++" for 127.0.0.1 at 2019-04-22 23:03:21 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"", "description"=>"    "}}
+  Rendered posts/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=&post%5Bdescription%5D=++++" for 127.0.0.1 at 2019-04-22 23:03:21 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"", "description"=>"    "}}
+  Rendered posts/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=&post%5Bdescription%5D=++++" for 127.0.0.1 at 2019-04-22 23:03:22 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"", "description"=>"    "}}
+  Rendered posts/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=Mineral&post%5Bdescription%5D=The+power+of+failing++++" for 127.0.0.1 at 2019-04-22 23:03:31 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"Mineral", "description"=>"The power of failing    "}}
+  Rendered posts/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-22 23:04:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 148ms (Views: 142.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=American+Football&post%5Bdescription%5D=Never+Meant++++" for 127.0.0.1 at 2019-04-22 23:04:33 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"American Football", "description"=>"Never Meant    "}}
+  Rendered posts/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=American+Football&post%5Bdescription%5D=Never+Meant++++" for 127.0.0.1 at 2019-04-22 23:08:50 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"American Football", "description"=>"Never Meant    "}}
+  Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=American+Football&post%5Bdescription%5D=Never+Meant++++" for 127.0.0.1 at 2019-04-22 23:08:51 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"American Football", "description"=>"Never Meant    "}}
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-22 23:08:56 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2019-04-22 23:09:09 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mfQVme6EPt4dsyEeOw/9pBRgqaHOUARJup99TeP9WIl17kjxg8dX+Jmcvu4nlCzQjkF1DkfyudXCwvDgcYOW0w==", "post"=>{"title"=>"American Football", "description"=>"Never Meant"}}
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-04-22 23:09:09 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-22 23:09:22 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-22 23:09:23 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-22 23:09:23 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-04-22 23:09:24 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2019-04-22 23:09:28 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0+L6y5/luLug8xA24i0lyrf1BbFedtPFnaEqZSyIqEM/+Kej8qbRnSTcj8b+tvS+LdTZHtfUblnl/KfIvvZmGQ==", "post"=>{"title"=>"Mineral", "description"=>"Gloria"}}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Mineral"], ["description", "Gloria"], ["created_at", "2019-04-23 03:09:28.908843"], ["updated_at", "2019-04-23 03:09:28.908843"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 10ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-04-22 23:09:28 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.1ms)
